@@ -37,11 +37,6 @@ p {
     line-height: 23px;
 }
 
-.box {
-    width: 100vw;
-    height: 100vh;
-}
-
 .pattern img {
     width: 30px;
     height: 30px;
@@ -224,4 +219,49 @@ button:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 320px) and (max-width: 424.85px) {
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .content-box {
+        height: auto;
+        margin: 50px 0;
+    }
+
+    .grid-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        right: -1.4%;
+    }
+
+    .pattern {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pattern-box {
+        align-items: unset;
+    }
+
+    .buttons-box, .buttons-box2 {
+        display: none;
+    }
+
+    .author {
+        width: 40%;
+        height: 2%;
+        top: 95.8%;
+        right: 52.5%;
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-right: 0;
+    }
 }
