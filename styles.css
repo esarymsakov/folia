@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
+    position: relative;
 }
 
 a {
@@ -45,12 +46,13 @@ p {
 
 .pattern {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
     position: relative;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 80px;
-    overflow: hidden;
+    gap: 75px;
     justify-items: center;
     z-index: -2;
 }
@@ -65,9 +67,6 @@ p {
 }
 
 .content-box {
-    width: 85%;
-    height: 85%;
-    position: absolute;
     background-color: rgba(235, 252, 255, 0.7);
     border: 4px solid #081E21;
     -webkit-box-shadow: 22px 21px 4px -2px rgba(15, 113, 187, 0.48);
@@ -77,7 +76,7 @@ p {
 
 .title {
     position: absolute;
-    top: -23px;
+    top: -20px;
     right: 200px;
     z-index: 0;
 }
@@ -109,13 +108,14 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    row-gap: 15px;
+    row-gap: 75px;
     padding: 35px 15px;
 }
 
 .card {
     border: 3px solid black;
     padding: 10px;
+    height: 100%;
 }
 
 .card:hover {
@@ -125,6 +125,13 @@ p {
     transition: 0.6s;
     transform: translate3d(-5px, -5px, -5px);
     border: 4px solid black;
+}
+
+.box {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding: 0 50px;
 }
 
 .img {
@@ -144,16 +151,12 @@ p {
 }
 
 .author {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
-    top: 95%;
-    right: 0%;
     background-color: black;
-    width: 13%;
-    height: 5%;
+    width: 25%;
 }
 
 .author p {
@@ -240,7 +243,8 @@ button:hover {
     }
 
     .title {
-        right: -1.4%;
+        right: 8%;
+        top: 31px;
     }
 
     .pattern {
@@ -255,8 +259,12 @@ button:hover {
         display: none;
     }
 
+    .box {
+        padding: 0 15px;
+    }
+
     .author {
-        width: 40%;
+        width: 60%;
         height: 2%;
         top: 95.8%;
         right: 52.5%;
@@ -264,4 +272,41 @@ button:hover {
         padding-left: 10px;
         padding-right: 0;
     }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767.85px) {
+    .grid-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-box {
+        -webkit-box-shadow: 4px 4px 4px 0px rgba(78, 157, 217, 0.2);
+        -moz-box-shadow: 4px 4px 4px 0px rgba(78, 157, 217, 0.2);
+        box-shadow: 4px 4px 4px 0px rgba(78, 157, 217, 0.2);
+    }
+
+    .title {
+        right: 20%;
+    }
+
+    .box {
+        padding: 0 15px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    body {
+        margin: 0;
+    }
+
+    .box {
+        top: 49px;
+    }
+
+    .title {
+        top: -19px;
+    }
+
 }
