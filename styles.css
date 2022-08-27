@@ -153,10 +153,10 @@ p {
 .author {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
+    justify-content: flex-start;
+    padding-left: 20px;
     background-color: black;
-    width: 25%;
+    width: 15%;
 }
 
 .author p {
