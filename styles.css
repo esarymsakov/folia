@@ -33,10 +33,10 @@ h2 {
 }
 
 h3 {
-    font-family: 'Rosario', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     font-weight: 500;
-    line-height: 15px; 
+    line-height: 0px; 
 }
 
 p {
@@ -305,7 +305,8 @@ p {
 
     .pattern {
         grid-template-columns: repeat(3, 1fr);
-        max-height: unset;
+        overflow: hidden;
+        max-height: 1800px;
         gap: 75px;
     }
 
@@ -321,18 +322,37 @@ p {
     .box {
         padding: 0;
         align-items: unset;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: unset;
+        max-height: unset;
+        height: unset;
     }
 
     .author {
         width: 60%;
         height: 2%;
-        top: 95.8%;
-        right: 52.5%;
+        bottom: 0;
+        left: 0;
+        top: unset;
+        right: unset;
         justify-content: flex-start;
         padding-left: 10px;
         padding-right: 0;
+    }
+
+    .next, .prev {
+        top: 98%;
+    }
+
+    .next {
+        right: 30%;
+    }
+
+    .prev {
+        left: 30%;
+    }
+
+    .img {
+        height: 120px;
     }
 }
 
@@ -374,6 +394,7 @@ p {
 
     .box {
         padding: 0 15px;
+        height: unset;
     }
     
 }
